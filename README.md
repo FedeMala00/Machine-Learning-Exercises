@@ -7,35 +7,52 @@ It calculates the number of unique values for each attribute and stores this in 
 
 The data is then split into a training set and a test set using random permutation of the indices.
 
-The fillCell function calculates the likelihood probabilities for each attribute value given the class (either 'yes' or 'no'). These probabilities are stored in a cell array.
+`fillCell`: Calculates likelihood probabilities for attribute values given the class.
 
-The check_attributes function checks if there are any attribute values in the test set that do not appear in the training set. If there are, it discards the corresponding pattern.
+`check_attributes`: Checks for attribute value consistency between training and test sets.
 
-The check_dimension function checks if the training and test matrices have the correct dimensions.
+`check_dimension`: Ensures correct dimensions of training and test matrices.
 
-The readResult function performs the classification on the test set. It calculates the posterior probabilities for each class (using the likelihoods calculated earlier and the prior probabilities of each class). It then assigns each test instance the class with the highest posterior probability.
+`readResult`: Performs classification on the test set and calculates error rate.
 
 Finally, it calculates and displays the error rate of the classification.
 
 In summary, this code is implementing a Naive Bayes classifier for a dataset with categorical attributes, and it uses the classifier to predict the class labels of a test set and calculate the error rate of the predictions.
 
 ## Second Assignment ## 
-It reads the data from the CSV files and performs some preprocessing.
+The code performs the following tasks:
 
-It performs linear regression on the Turkish dataset, which contains S&P 500 and MSCI Europe index data. It calculates the regression coefficients and plots the data points and the regression line.
+Data Preprocessing:
 
-It performs linear regression on different random subsets of the Turkish dataset and plots the regression lines and data points for each subset.
+Reads the data from CSV files and performs some preprocessing.
+Linear Regression - Turkish Dataset:
 
-It performs linear regression with an intercept on the 'mpg' and 'weight' columns of the 'mtcars' dataset. It calculates the regression coefficients and plots the data points and the regression line.
+Performs linear regression on the Turkish dataset, containing S&P 500 and MSCI Europe index data.
+Utilizes the linear_regression_turkish_dataset function.
+Calculates regression coefficients and plots data points along with the regression line.
+Linear Regression - Random Subsets:
 
-It performs multiple linear regression on the 'mpg', 'dis', 'hp', and 'weight' columns of the 'mtcars' dataset. It calculates the regression coefficients and plots the real and predicted mpg values.
+Performs linear regression on different random subsets of the Turkish dataset.
+Utilizes the linear_regression_random_subsets function.
+Plots regression lines and data points for each subset.
+Linear Regression with Intercept - 'mtcars' Dataset:
 
-It calculates the Mean Squared Error (MSE) for the linear regression models on different subsets of the datasets.
+Performs linear regression with an intercept on the 'mpg' and 'weight' columns of the 'mtcars' dataset.
+Utilizes the linear_regression_with_intercept_mtcars function.
+Calculates regression coefficients and plots data points along with the regression line.
+Multiple Linear Regression - 'mtcars' Dataset:
 
-It repeats the above tasks multiple times and stores the MSE results in tables.
+Performs multiple linear regression on the 'mpg', 'dis', 'hp', and 'weight' columns of the 'mtcars' dataset.
+Utilizes the multiple_linear_regression_mtcars function.
+Calculates regression coefficients and plots real and predicted mpg values.
+Mean Squared Error (MSE) Calculation:
 
-In summary, this code is performing linear and multiple linear regression on different subsets of two datasets, calculating the MSE for each model, and visualizing the results.
+Calculates the Mean Squared Error (MSE) for the linear regression models on different subsets of the datasets.
+Utilizes the calculate_mse function.
+MSE Results Storage:
 
+Repeats the above tasks multiple times and stores the MSE results in tables.
+In summary, this code performs linear and multiple linear regression on different subsets of two datasets, calculates the MSE for each model, and visualizes the results.
 ## Third Assignment ## 
 
 It loads the MNIST training and test sets.
